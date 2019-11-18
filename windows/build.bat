@@ -1,6 +1,7 @@
 @echo off 
 echo "Starting build of %1 on branch %2"
-cd %systemdrive%%homepath%\Projects\%1
+cd "%~dp0"
+cd ..\Projects\%1
 git reset HEAD --hard
 git checkout master -f
 git pull
