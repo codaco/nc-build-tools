@@ -1,19 +1,24 @@
 #!/bin/bash
 NODE_VERSION=${2:-12.8}
 BRANCH=${1:-master}
+DIRECTORY=$(cd `dirname $0` && pwd)
 
-echo "Preparing to build Network Canvas suite (branch $BRANCH)"
+source ~/.nvm/nvm.sh
+
+echo "Preparing to build Network Canvas suite (branch $BRANCH) $DIRECTORY"
 echo "Installing correct node version..."
 nvm install $NODE_VERSION
 nvm use $NODE_VERSION
 echo "Updating project submodules..."
-git submodule init --update --recursive -f
+git submodule update --init --recursive -f
 echo "Building Network Canvas..."
-sh ./build.sh Network-Canvas $BRANCH
+sh "$DIRECTORY"/build.sh Network-Canvas "$BRANCH" &
 echo "Finished building Network Canvas."
 echo "Building Architect..."
-sh ./build.sh Architect $BRANCH
+sh "$DIRECTORY"/build.sh Architect "$BRANCH" &
 echo "Finished building Architect."
 echo "Building Server..."
-sh ./build.sh Server $BRANCH
+sh "$DIRECTORY"/build.sh Server "$BRANCH" &
 echo "Finished building Server."
+wait
+echo "Done building all apps."

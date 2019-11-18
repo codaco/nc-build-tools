@@ -1,6 +1,9 @@
 #!/bin/bash
 
+DIRECTORY=$(cd `dirname $0` && pwd)
+
 echo "Starting build of $1 on branch $2"
+cd $DIRECTORY
 cd ../Projects/"$1"
 git reset HEAD --hard
 git checkout master -f
