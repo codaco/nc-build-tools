@@ -1,6 +1,6 @@
 #!/bin/bash
-NODE_VERSION = ${2:-12.8}
-BRANCH = ${1:-master}
+NODE_VERSION=${2:-12.8}
+BRANCH=${1:-master}
 
 echo "Preparing to build Network Canvas suite (branch $BRANCH)"
 echo "Installing correct node version..."

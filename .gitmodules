@@ -2,8 +2,8 @@
 	path = projects/Network-Canvas
 	url = https://github.com/codaco/Network-Canvas.git
 [submodule "Server"]
-	path = Server
+	path = projects/Server
 	url = https://github.com/codaco/Server.git
 [submodule "Architect"]
-	path = Architect
+	path = projects/Architect
 	url = https://github.com/codaco/Architect.git
