@@ -4,3 +4,6 @@
 [submodule "Server"]
 	path = Server
 	url = https://github.com/codaco/Server.git
+[submodule "Architect"]
+	path = Architect
+	url = https://github.com/codaco/Architect.git
