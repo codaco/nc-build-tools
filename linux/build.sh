@@ -14,5 +14,5 @@ git submodule update --init --recursive -f
 node --version
 npm --version
 npm install
-npm run dist:mac
+npm run dist:linux
 echo "Done!"
