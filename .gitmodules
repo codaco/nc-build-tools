@@ -1,3 +1,6 @@
 [submodule "projects/Network-Canvas"]
 	path = projects/Network-Canvas
 	url = https://github.com/codaco/Network-Canvas.git
+[submodule "Server"]
+	path = Server
+	url = https://github.com/codaco/Server.git
